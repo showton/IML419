@@ -11,14 +11,13 @@ for (i=0; i<3; i++) {
 }
 
 void loop(){
+ sensVal = analogRead(potPin);
  for (i=0;i<3;i++) {
    digitalWrite(pinArray[i], HIGH);
-   sensVal = analogRead(potPin);
    delay(sensVal);
   }
   for (i=3;i<0;i--) {
    digitalWrite(pinArray[i], LOW);
-   sensVal = analogRead(potPin);
    delay(sensVal);
   }
 }
